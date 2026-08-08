@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DOM practice</title>
+</head>
+<body>
+
+    <main class="app">
+
+        <header class="app-header">
+            <div>
+                <p class="eyebrow">PERSONAL PRODUCTIVITY</p>
+                <h1>TaskFlow</h1>
+                <p class="subtitle">Stay organized. Get things done.</p>
+            </div>
+        </header>
+
+
+        <section class="task-input-section">
+            <label for="taskInput" class="sr-only">
+                Task description
+            </label>
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What needs to be done?"
+                autocomplete="off"
+            >
+
+            <button id="addBtn">
+                Add Task
+            </button>
+
+        </section>
+
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span class="stat-label">Total Tasks</span>
+                <strong id="taskCount">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Completed</span>
+                <strong id="completedCount">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Remaining</span>
+                <strong id="remainingCount">0</strong>
+            </div>
+
+        </section>
+
+
+        <section class="tasks-section">
+
+            <div class="tasks-header">
+                <div>
+                    <h2>Your Tasks</h2>
+                    <p>Manage your daily tasks</p>
+                </div>
+
+                <button id="clearBtn" class="clear-btn">
+                    Clear All
+                </button>
+            </div>
+
+
+            <ul id="taskList"></ul>
+
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">✓</div>
+                <h3>No tasks yet</h3>
+                <p>Add your first task and get started.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
